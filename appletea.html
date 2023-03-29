@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="portfolio contact team">
+    <meta name="description" content="portfolio website about myself and my team">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
+    <style>
+        @font-face{
+            font-family: 'satisfy';
+            src:url("fonts/Satisfy/Satisfy-Regular.ttf");
+        }
+        *{
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            margin:0;
+        }
+        img{
+            max-width:100%;
+            height:auto;
+        }
+        h2{
+            margin:0;
+            font-weight:normal;
+        }
+        a{
+            text-decoration: none;
+            color:white;
+        }
+        a:hover{
+            background-color: rgba(0, 0, 0, 0.541);
+            padding:5px 10px;
+        }
+        header{
+            background-image: url("images/background2.avif");
+            color:white;
+        }
+        .head{
+            background-color:rgba(50, 47, 47, 0.852);
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding:10px 0px;
+        }
+        .box{
+            width:80%;
+        }
+        .row1{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .row1>div:first-child{
+            width:40%;
+            font-size:x-large;
+        }
+        .row1>div:nth-child(2){
+            width:50%;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .intro{
+            background-color: rgba(0, 0, 0, 0.333);
+            display:flex;
+            flex-wrap: wrap;  
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height:500px;
+            color:black;
+        }
+        .row2 h1{
+            font-family:satisfy;
+            margin: 0%;
+            font-size:50px;
+            word-spacing: 10px;
+        }
+        .row2 button{
+            background-color: orange;
+            border:none;
+            padding:5px 10px;
+            color:black;
+        }
+        section{
+            display:flex;
+            flex-wrap: wrap;  
+            justify-content: center;
+            padding-top:30px;
+        }
+        .box1{
+            width:80%;
+            display:flex;
+            flex-wrap: wrap;  
+            justify-content: center;
+        }
+        .row{
+            width:60%;
+            text-align: center;
+        }
+        .col1{
+            width:35%;
+        }
+        .col2{
+            width:65%;
+        }
+        h3{
+          margin: 0%;
+          font-weight: 500;  
+        }
+        main{
+            display:flex;
+            flex-wrap: wrap;  
+            justify-content: center;  
+        }
+        input[type="range"]{
+            -webkit-appearance: none;
+            width: 100%;
+            border-radius: 0%;
+            background-color:orange;
+        }
+        form>div{
+            line-height: 30px;
+        }
+        .subscribe{
+            background-color: orange;
+            display:flex;
+            flex-wrap: wrap;  
+            justify-content: center;
+            padding:30px 0px;
+            height:150px;
+        }
+        .box2{
+            width:80%;
+        }
+        .box2 h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .box2 form{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .box2 input[type="text"]{
+            width:25%;
+            height:30px;
+            border:none;
+            padding-left:10px;
+            background-color:yellow;
+        }
+        input[type="email"]{
+            width:30%;
+            height:30px;
+            border:none;
+            padding-left:10px;
+            background-color:yellow;
+        }
+        input[type="submit"]{
+            width:15%;
+            height:30px;
+            background-color: black;
+            color:white;
+            border:none;
+        }
+        article{
+            background-color: black;
+            color:white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding:20px 0px;
+        }
+        .block{
+            background-color: black;
+            color:white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+        .align{
+            width:75%;
+            text-align: center;
+        }
+        .pic{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-between;
+        }
+        .image{
+            width:22%;
+        }
+        .border{
+            padding:5px;
+            padding-bottom: 1px; 
+            border-radius: 100%;
+            background-color: orange;
+        }
+        h4{
+            margin: 5px 0px;
+        }
+        .image p{
+            margin:8px;
+        }
+        .image button{
+            padding:5px 15px;
+            background-color: orange;
+            border:none;
+            color:white;
+            margin-bottom:10px;
+        }
+        aside{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .link {
+            width:40%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-between
+        }
+        .link a{
+            display: block;
+            border:2px orange solid;
+            text-decoration: none;
+            color:  #555454;
+            padding:3px 15px;
+        }
+        .photo{
+            display:grid;
+            grid-template-columns: 80%;
+            justify-content: center;
+            padding:30px 0px;
+            row-gap: 30px;
+        }
+        .picrow{
+            display:grid;
+            grid-template-columns:30% 30% 30%;
+            column-gap: 30px;
+        }
+        .picrow>div>div{
+            display: grid;
+            background-color: rgba(0, 0, 0, 0.571);
+            color:white;
+        }
+        .picrow>div{
+            display: grid;
+            align-items: end;
+        }
+        .picrow h5{
+            font-size: large;
+            margin:0;
+            padding-left:10px;
+        }
+        .picrow>div p{
+            padding-left:10px;
+        }
+        footer{
+            background-image: url(images/background.avif);
+            color:white;
+            text-align: center;
+            padding-top:30px;
+           
+        }
+        .end {
+            display: grid;
+            grid-template-columns: 60%;
+            justify-content: center;
+        }
+        .end1{
+            display: grid;
+            grid-template-columns: 40%;
+            justify-content: center;
+            row-gap: 15px;
+            padding-bottom:20px;
+        }
+        .end1 input, textarea{
+            padding: 5px;
+        }
+        footer button{
+            background-color: orange;
+            color:black;
+            border:none;
+            padding:5px 20px;
+            margin-bottom: 50px;
+        }
+        .anchor{
+            margin-bottom: 20px;
+        }
+        .anchor a{
+            padding:10px;
+        }
+        footer>div:last-child{
+            font-size: small;
+        }
+        @media  only screen and (max-width:576px) {
+            .row1>div:first-child, .row1>div:last-child{
+                width:100%;
+                text-align: center;
+            }
+            .col1, .col2{
+                width:100%;
+            }
+            .image{
+                width:45%;
+            }
+            .link{
+                width:80%;
+            }
+            .picrow{
+                grid-template-columns: 100%;
+                row-gap:30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="box">
+                <div class="row1">
+                    <div>LOGO DESIGN</div>
+                    <div>
+                        <a href="https://www.google.com/">Home</a>
+                        <a href="https://www.google.com/">About</a>
+                        <a href="https://www.google.com/">Team</a>
+                        <a href="https://www.google.com/">Portfolio</a>
+                        <a href="https://www.google.com/">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="intro">
+            <div class="row2">
+                <h1>Nice to meet you !</h1>
+                <p>we just don't build websites, we build brands</p>
+                <a href="http:www.google.com" alt="google"><button type="submit" aria-label="submit">GET IN TOUCH</button></a>
+            </div>
+        </div>  
+    </header>
+    <section>
+        <div class="row">
+            <h2>ABOUT US</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae quae repudiandae ducimus culpa harum dignissimos blanditiis labore veniam ratione recusandae! Eligendi reprehenderit sed est vero cupiditate velit, fuga eius possimus.</p>
+        </div>
+    </section>
+    <main>
+        <div class="box1">
+            <div class="col1">
+                <h3>WHAT CAN WE DO</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam ex laborum nisi ea, alias laboriosam ad commodi consequuntur vel omnis dignissimos vero magni quia doloremque necessitatibus? Pariatur repellat quod mollitia Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="col2">
+                <form>
+                    <div>
+                        <div><label for="design">DESIGN</label></div>
+                        <div><input type="range" id="design" /></div>
+                    </div>
+                    <div>
+                        <div><label for="code">CODING</label></div>
+                        <div><input type="range" id="code" /></div>
+                    </div>
+                    <div>
+                        <div><label for="marketing">MARKETING</label></div>
+                        <div><input type="range" id="marketing" /></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <div class="subscribe">
+        <div class="box2">
+            <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+            <form>
+                <input type="text" name="firstname" placeholder="FIRST NAME"/>
+                <input type="text" name="lastname" placeholder="LAST NAME"/>
+                <input type="email" name="email" placeholder="E-MAIL ADDRESS"/>
+                <input type="submit" value="SUBSCRIBE"/>
+            </form>
+        </div>
+    </div>
+    <article>
+        <div class="row">
+            <h2>OUR TEAM</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit a ad asperiores omnis consectetur optio dolores deleniti fuga aut vitae et temporibus voluptatem, tempora exercitationem facere dolor debitis adipisci accusamus!</p>
+        </div>
+    </article>
+    <div class="block">
+        <div class="align">
+            <div class="pic">
+                <div class="image">
+                    <div class="border"><img  src="images/img1-modified.avif" alt="img1"/></div>
+                    <h4>Name</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button type="submit" aria-label="submit"><i class="fa-regular fa-envelope fa-lg"></i></button>
+                </div>
+                <div class="image">
+                    <div class="border"><img  src="images/img2-modified.avif" alt="img1"/></div>
+                    <h4>Name</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button type="submit" aria-label="submit"><i class="fa-regular fa-envelope fa-lg"></i></button>
+                </div>
+                <div class="image">
+                    <div class="border"><img  src="images/img3-modified.avif" alt="img1"/></div>
+                    <h4>Name</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button type="submit" aria-label="submit"><i class="fa-regular fa-envelope fa-lg"></i></button>
+                </div>
+                <div class="image">
+                    <div class="border"><img  src="images/img4-modified.avif" alt="img1"/></div>
+                    <h4>Name</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button type="submit" aria-label="submit"><i class="fa-regular fa-envelope fa-lg"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <section>
+            <div class="row">
+                <h2>PORTFOLIO</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae quae repudiandae ducimus culpa harum dignissimos blanditiis labore veniam ratione recusandae! Eligendi reprehenderit sed est vero cupiditate velit, fuga eius possimus.</p>
+            </div>
+        </section>
+        <aside>
+            <div class="link">
+                <a href="http:www.google.com">All</a>
+                <a href="http:www.google.com">Design</a>
+                <a href="http:www.google.com">Identify</a>
+                <a href="http:www.google.com">Photography</a>
+                <a href="http:www.google.com">Illustration</a>
+            </div>
+        </aside>
+        <div class="photo">
+            <div class="picrow">
+                <div style="background-image: url(images/r1c1tea.avif); height: 290px;">
+                    <div class="get">
+                        <h5>Title</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div style="background-image: url(images/r1c2tea.avif); height: 290px;">
+                    <div>
+                        <h5>Title</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div style="background-image: url(images/r1c3tea.avif); height: 290px;" >
+                    <div>
+                        <h5>Title</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="picrow">
+                <div style="background-image: url(images/r2c3tea.avif); height: 290px;">
+                    <div>
+                        <h5>Title</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div style="background-image: url(images/r2c2tea.avif); height: 290px;"></div>
+                <div style="background-image: url(images/r2c1tea.avif); height: 290px;">
+                    <div>
+                        <h5>Title</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="picrow">
+                <div style="background-image: url(images/r3c1tea.avif); height: 290px;">
+                    <div>
+                        <h5>Title</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div style="background-image: url(images/r3c3tea.avif); height: 290px;">
+                    <div>
+                        <h5>Title</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div style="background-image: url(images/r3c2tea.avif); height: 290px;">
+                    <div>
+                        <h5>Title</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="end">
+          <h2>CONTACT</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim alias itaque, totam necessitatibus dolorum libero non excepturi cupiditate temporibus delectus debitis. Sed obcaecati itaque accusamus fuga consequatur omnis, corrupti commodi.</p>
+        </div>
+        <div class="end1">
+            <input type="text" aria-label="name" placeholder="Enter your Name">
+            <input type="text" aria-label="address" placeholder="Enter your Address">
+            <input type="text" aria-label="city" placeholder="Enter your city">
+            <input type="text" aria-label="address" placeholder="Enter your EmailAddress">
+            <textarea placeholder="Enter your Email Message" rows="5"></textarea>
+        </div>
+        <button>SUBMIT</button>
+        <div class="anchor">
+            <a href="https://www.google.com/">Home</a>
+            <a href="https://www.google.com/">About</a>
+            <a href="https://www.google.com/">Team</a>
+            <a href="https://www.google.com/">Portfolio</a>
+            <a href="https://www.google.com/">Contact</a>
+        </div>
+        <div>Copyright LogoDesign2020. All Rights Reserved</div>
+    </footer>
+</body>
+</html>
